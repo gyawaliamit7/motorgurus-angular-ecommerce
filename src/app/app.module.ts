@@ -15,7 +15,9 @@ import { HomeComponent } from './home/home.component';
 import { BikesComponent } from './bikes/bikes.component';
 import { SavedListingComponent } from './user/saved-listing/saved-listing.component';
 import { SellBikeComponent } from './user/sell-bike/sell-bike.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './login/login/login.component';
+import { EmailComponent } from './login/email/email.component';
+import { SignUpComponent } from './login/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     BikesComponent,
     SavedListingComponent,
+    SellBikeComponent,
     LoginComponent,
-    SellBikeComponent
+    EmailComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +41,12 @@ import { LoginComponent } from './login/login.component';
     RouterModule.forRoot([
       { path: '' , component:HomeComponent },
       { path: 'bikes' , component:BikesComponent },
-      { path: 'login' , component: LoginComponent},
       { path: 'user/sell-bikes' , component: SellBikeComponent},
       { path: 'user/saved-listing' , component: SavedListingComponent},
+      { path: 'login/login', component: LoginComponent },
+      { path: 'login/sign-up',component: SignUpComponent },
+      { path: 'login/email',component: EmailComponent },
+      
 
 
 

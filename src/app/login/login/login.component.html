@@ -1,0 +1,17 @@
+
+<form class="form-signin">
+    <img class="mb-4" id ="lock" src="/../../../assets/images/lock.svg" alt="" width="72" height="72" >
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <button  class="btn  btn-primary btn-block"  type="button" id ="fb" (click) ="loginFb()"> Login with Facebook</button>
+    <button  class="btn  btn-primary btn-block"  type="button" id ="google" (click) ="loginGoogle()"> Login with Google</button>
+    <button routerLink="/login/email" id="email" class="btn  btn-primary btn-block" > Email</button>
+
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <p><a routerLink="/login/sign-up" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a> </p>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  </form>

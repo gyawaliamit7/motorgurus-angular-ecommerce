@@ -1,0 +1,82 @@
+#lock {
+    width:40%;
+    margin: 1.5em auto 4em auto; 
+    display:block;
+    
+}
+
+#fb {
+    background:#3B5998 url('../../../assets/images/facebook.svg') no-repeat 14px -10px;
+    background-size: 47px;
+    color:#fff;
+}
+
+#google {
+    border: 1px solid #95989A;
+    background: #fff url('../../../assets/images/google.svg')  no-repeat 25px;
+    background-size: 25px;
+    color: #000000;
+}
+
+#email {
+    background: #ffffff url('../../../assets/images/email.svg')  no-repeat 25px;
+    background-size:  25px;
+    color: #000000;
+}
+
+@media (max-width: 600px) {
+    #page {
+        padding:1em;
+    }
+    #toolbar {
+        width:90%;
+        margin-left: -45%;
+    }
+    #fb {
+        background:#3B5998;
+    }
+
+    #google {
+        background: #fff;
+    }
+
+    #email {
+        background: #ffffff;
+    }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #7a7777;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  background-color: #ECECEC;
+}
+.form-signin .checkbox {
+  font-weight: 200;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
