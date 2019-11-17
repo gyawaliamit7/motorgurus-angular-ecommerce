@@ -19,6 +19,9 @@ import { LoginComponent } from './login/login/login.component';
 import { EmailComponent } from './login/email/email.component';
 import { SignUpComponent } from './login/sign-up/sign-up.component';
 
+import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,21 +41,23 @@ import { SignUpComponent } from './login/sign-up/sign-up.component';
     AngularFireAuthModule,
     AppRoutingModule,
     NgbModule,
+
+
     RouterModule.forRoot([
       { path: '' , component:HomeComponent },
       { path: 'bikes' , component:BikesComponent },
-      { path: 'user/sell-bikes' , component: SellBikeComponent},
-      { path: 'user/saved-listing' , component: SavedListingComponent},
+      { path: 'user/sell-bikes' , component: SellBikeComponent , canActivate: [AuthGuardService]},
+      { path: 'user/saved-listing' , component: SavedListingComponent, canActivate: [AuthGuardService]},
       { path: 'login/login', component: LoginComponent },
       { path: 'login/sign-up',component: SignUpComponent },
       { path: 'login/email',component: EmailComponent },
-      
-
-
 
     ]),
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
