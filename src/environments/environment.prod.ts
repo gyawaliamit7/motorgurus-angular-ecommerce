@@ -5,7 +5,7 @@ export const environment = {
     authDomain: "motorgurus-818ef.firebaseapp.com",
     databaseURL: "https://motorgurus-818ef.firebaseio.com",
     projectId: "motorgurus-818ef",
-    storageBucket: "",
+    storageBucket: "motorgurus-818ef.appspot.com",
     messagingSenderId: "283049952336",
     appId: "1:283049952336:web:4bcb33c2398d86ac"
   }
