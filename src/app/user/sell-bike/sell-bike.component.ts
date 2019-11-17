@@ -1,3 +1,5 @@
+import { BikesService } from './../../services/bikes.service';
+import { MakerService } from './../../services/maker.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellBikeComponent implements OnInit {
 
-  constructor() { }
+  makers$;
+  constructor(private makerService: MakerService, private  bikeService: BikesService ) {
+    this.makers$ = makerService.getMaker();
+  }
 
   ngOnInit() {
+  }
+
+  save(bikes) {
+    console.log(bikes);
+    this.bikeService.create(bikes);
   }
 
 }

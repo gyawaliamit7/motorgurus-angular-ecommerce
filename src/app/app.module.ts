@@ -1,3 +1,6 @@
+import { BikesService } from './services/bikes.service';
+import { MakerService } from './services/maker.service';
+import { UserService } from './services/user.service';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -5,6 +8,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms'
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -41,6 +45,7 @@ import { AuthGuardService } from './services/auth-guard.service';
     AngularFireAuthModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
 
 
     RouterModule.forRoot([
@@ -56,7 +61,10 @@ import { AuthGuardService } from './services/auth-guard.service';
   ],
   providers: [
     AuthService,
-    AuthGuardService
+    AuthGuardService,
+    UserService,
+    MakerService,
+    BikesService
   ],
   bootstrap: [AppComponent]
 })

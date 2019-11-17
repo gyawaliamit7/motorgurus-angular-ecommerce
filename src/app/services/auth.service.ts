@@ -30,14 +30,14 @@ this.authLogin(new firebase.auth.FacebookAuthProvider());
 }
 
 authLogin(provider) {
-  const returnUrl = this.route.snapshot.queryParams.get('returnUrl') || '/';
-  localStorage.setItem('returnUrl', returnUrl);
   this.afAuth.auth.signInWithPopup(provider)
     .then((result) => {
       console.log('Successfully Logged in !');
     }).catch((error) => {
         console.log(error);
     });
+  const returnUrl =  '/';
+  localStorage.setItem('returnUrl', returnUrl);
   }
 
 
